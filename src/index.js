@@ -1,1 +1,3 @@
-console.log('Test for initial commit.')
+import initializeWebsite from './website.js';
+
+initializeWebsite();
