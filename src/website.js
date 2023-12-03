@@ -1,3 +1,7 @@
+import loadHome from './home.js';
+import loadMenu from './menu.js';
+import loadContact from './contact.js';
+
 function createHeader() {
     const header = document.createElement('header');
     header.classList.add('header');
@@ -31,6 +35,7 @@ function createNav() {
     homeButton.addEventListener('click', (e) => {
         if (e.target.classList.contains('active')) return;
         setActiveButton(homeButton);
+        loadHome();
     });
 
     const menuButton = document.createElement('button');
@@ -39,6 +44,7 @@ function createNav() {
     menuButton.addEventListener('click', (e) => {
         if (e.target.classList.contains('active')) return;
         setActiveButton(menuButton);
+        loadMenu();
     });
 
     const contactButton = document.createElement('button');
@@ -47,6 +53,7 @@ function createNav() {
     contactButton.addEventListener('click', (e) => {
         if (e.target.classList.contains('active')) return;
         setActiveButton(contactButton);
+        loadContact();
     });
 
     nav.appendChild(homeButton);
