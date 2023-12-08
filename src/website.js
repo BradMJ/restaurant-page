@@ -11,6 +11,7 @@ function createHeader() {
     restaurantName.innerText = 'The Kraken';
 
     header.appendChild(restaurantName);
+    header.appendChild(createNav());
 
     return header;
 };
@@ -75,9 +76,11 @@ function createFooter() {
     footer.classList.add('footer');
 
     const copyright = document.createElement('p');
+    copyright.classList.add('copyright');
     copyright.innerText = `Copyright © ${new Date().getFullYear()} BradMJ`;
 
     const githubLink = document.createElement('a');
+    githubLink.classList.add('github-link');
     githubLink.href = 'https://github.com/BradMJ';
     
     footer.appendChild(copyright);
@@ -90,9 +93,11 @@ function initializeWebsite() {
     const content = document.querySelector('#content');
 
     content.appendChild(createHeader());
-    content.appendChild(createNav());
     content.appendChild(createMain());
     content.appendChild(createFooter());
+
+    setActiveButton(document.querySelector('.nav-button'));
+    loadHome();
 };
 
 export default initializeWebsite;
