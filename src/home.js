@@ -4,8 +4,8 @@ function createHome() {
 
     const homeImage = document.createElement('img');
     homeImage.classList.add('home-img');
-    homeImage.src = '../images/homeImg.jpeg';
-    homeImage.alt = 'Plated Food';
+    homeImage.src = 'images/homeImg.jpeg';
+    homeImage.alt = 'Restaurant Logo';
 
     home.appendChild(homeImage);
     home.appendChild(createParagraph('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'));

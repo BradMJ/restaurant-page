@@ -12,7 +12,7 @@ function createContact() {
 
     const restaurantLocation = document.createElement('img');
     restaurantLocation.classList.add('location-image');
-    restaurantLocation.src = '../images/restaurantLocation.png';
+    restaurantLocation.src = 'images/restaurantLocation.png';
     restaurantLocation.alt = 'The Kraken Restaurant Location';
 
     contact.appendChild(phoneNumber);
